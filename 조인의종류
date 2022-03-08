@@ -1,0 +1,6 @@
+# [Oracle] 조인의 종류
+## [참고자료](https://myjamong.tistory.com/238)
+
+- Nested Loop Join
+- Sorted Merge Join
+- Hash Join
