@@ -40,3 +40,16 @@ sonar.java.binaries=target/classes           /*binary 위치 java일 경우 예�
 #참고 프로퍼티
 sonar.host.url=https://cody-cqs.autoever.com/         /*소나큐브 url 설정*/
 ```
+
+
+## 서버 배포 (Publish over SSH)
+* 방화벽 선 오픈 필요
+1. 젠킨스 서버 -> 목적지 : 배포서버 22번 포트 오픈 
+2. 젠킨스 프로젝트 - Configuration - 빌드 후 조치 추가 - "Send build artifacts over SSH"
+3. SSH Server에는 배포서버 정보 입력
+4. "고급" 탭에는 해당하는 서버에 대한 Credential 추가 후 저장
+
+
+## SVN 연동
+1. workspace - Credentials - 본인 SVN에 접근하기 위한 계정/암호를 입력하여 credential 생성
+2. workspace - 구성 - 소스 코드 관리 - Subversion 에 본인 SVN 서버 정보 입력 (Credential은 본인이 추가한 SVN의 Credential 입력)
