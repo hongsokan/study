@@ -146,3 +146,10 @@ public class AbleProperties {
 - [Autowired](https://madplay.github.io/post/why-constructor-injection-is-better-than-field-injection)
 - [ModelMap](https://javaoop.tistory.com/56)
 - [LocalDateTime](https://java119.tistory.com/52)
+
+
+
+
+## 스프링 시큐리티
+- Spring Security는 '인증'과 '권한'에 대한 부분을 Filter 흐름에 따라 처리하도록 도와주는 하위 프레임워크
+> [참고자료](https://velog.io/@sago_mungcci/Spring-Security%EB%9E%80)
