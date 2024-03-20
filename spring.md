@@ -1,6 +1,57 @@
 
 # 스프링
 
+
+## 스프링 클라우드
+- MSA : 기존 모놀리식 서비스 방식에서 비즈니스 로직을 독립적인 프로젝트로 분리하여 개발하고 배포, 가장 앞단에서 API Gateway를 통해 요청을 분산하여 관리하는 구조
+- 모놀리식 : 하나의 프로젝트에 모든 비즈니스 로직과 설정 데이터들을 넣어 개발하고 배포하는 방식
+
+### 구성요소
+- Spring Cloud Gateway
+- Spring Cloud Eureka Server (모니터링 서버 역할)
+- Spring Cloud Eureka Client
+- Spring Config Server (application.properties 역할)
+- Config Repository
+- Spring Config Client
+
+### Config Repository 깃허브 설정 방법
+1. 깃허브 레포지토리 생성 
+2. 설정 파일 생성 (설정 파일명 : 이름-환경.properties / 이름-환경.yml / ex. hongsok-dev.properties)
+3. 리포지토리 외부 접속을 위한 비대칭 키 생성
+```bash
+ssh-keygen -m PEM -t rsa -b 4096 -C "코멘트(계정명 넣어도 됨)"
+```
+4. 생성된 비대칭 키 중 public 키 내용을 복사하여 깃허브 레포지토리에 등록
+```bash
+cd ~/.ssh
+vi id_rsa.pub
+```
+깃허브 레포지토리 - Settings - Depoly keys - Add Depoly key
+
+### Config Server
+
+
+### Config Client 
+
+
+### Eureka Server
+
+
+### Eureka Client
+
+
+### Spring Cloud Gateway
+
+
+
+
+
+## 스프링 시큐리티
+- Spring Security는 '인증'과 '권한'에 대한 부분을 Filter 흐름에 따라 처리하도록 도와주는 하위 프레임워크
+> [참고자료](https://velog.io/@sago_mungcci/Spring-Security%EB%9E%80)
+
+
+
 ## 객체 지향 설계 원칙
 
 - 단일 책임 원칙 (Single responsibility principle) : 한 클래스는 하나의 책임만 가져야 한다.
@@ -147,9 +198,3 @@ public class AbleProperties {
 - [ModelMap](https://javaoop.tistory.com/56)
 - [LocalDateTime](https://java119.tistory.com/52)
 
-
-
-
-## 스프링 시큐리티
-- Spring Security는 '인증'과 '권한'에 대한 부분을 Filter 흐름에 따라 처리하도록 도와주는 하위 프레임워크
-> [참고자료](https://velog.io/@sago_mungcci/Spring-Security%EB%9E%80)
